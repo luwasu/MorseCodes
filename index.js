@@ -19,9 +19,9 @@ const convertToMorse = function(str) {
     const array = str.split("");
     let result = '';
 
-    for (const i in str) {
+    for (let i = 0; i < str.length; i++) {
         result += charToMorseCode(array[i])
-        result += " ; "
+        result += " / "
     }
     return str + " --> translated to morse code -->  " + result;
 }
