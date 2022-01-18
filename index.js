@@ -1,12 +1,11 @@
-const alphabetString =
-    "a=.-;b=-...;c=-.-.;d=-..;e=.;f=..-;g=--.;h=....;i=..;j=.---;k=-.-;l=.-..;" +
-    "m=--;n=-.;o=---;p=.---.;q=--.-;r=.-.;s=...;t=-;u=..-;v=...-;w=.--;x=-..-;" +
-    "y=-.-;z=--..; =//;.=.-.-.-;,=--..--;?=..--..";
+const charToMorseCode = function(char) {
+    const alphabetString =
+        "a=.-;b=-...;c=-.-.;d=-..;e=.;f=..-;g=--.;h=....;i=..;j=.---;k=-.-;l=.-..;" +
+        "m=--;n=-.;o=---;p=.---.;q=--.-;r=.-.;s=...;t=-;u=..-;v=...-;w=.--;x=-..-;" +
+        "y=-.-;z=--..; =//;.=.-.-.-;,=--..--;?=..--..";
 
-let alphabetArray = alphabetString.split(";");
+    const alphabetArray = alphabetString.split(";");
 
-
-function charToMorseCode(char) {
     for (let i = 0; i < alphabetArray.length; i++) {
         let letter = alphabetArray[i].split("=")[0];
 
@@ -16,10 +15,7 @@ function charToMorseCode(char) {
     }
 }
 
-console.log(charToMorseCode("h"));
-
-
-function convertToMorse(str) {
+const convertToMorse = function(str) {
     const array = [];
     let result = '';
 
@@ -27,10 +23,10 @@ function convertToMorse(str) {
         result += array[i] = charToMorseCode(str[i])
         result += "; "
     }
-    return str + " translated to morse code:  " + result;
+    return str + " --> translated to morse code -->  " + result;
 }
 
-console.log(convertToMorse("Hello"))
+console.log(convertToMorse("Hello?"))
 
 
 
