@@ -16,12 +16,12 @@ const charToMorseCode = function(char) {
 }
 
 const convertToMorse = function(str) {
-    const array = [];
+    const array = str.split("");
     let result = '';
 
     for (const i in str) {
-        result += array[i] = charToMorseCode(str[i])
-        result += "; "
+        result += charToMorseCode(array[i])
+        result += " ; "
     }
     return str + " --> translated to morse code -->  " + result;
 }
